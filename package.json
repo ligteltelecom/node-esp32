@@ -6,11 +6,18 @@
   "engines": {
     "node": "20"
   },
+  "pre-commit": [
+    "ts.check",
+    "build",
+    "add-build"
+],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "nodemon -e json,ts src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js"
+    "build": "rimraf dist && tsc",
+    "start": "nodemon src/server.ts",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist"
   },
   "author": "Marcelo Diniz",
   "license": "ISC",
