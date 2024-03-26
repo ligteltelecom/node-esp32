@@ -15,7 +15,7 @@ server.use('/', (req: Request, res:Response) =>{
  res.status(404).send("Rota não encontrada.")
 })
 
-
-server.listen(process.env.PORT,()=>{
-        console.log(`Server rodando na porta ${process.env.PORT}`)
+const serverPort = process.env.PORT || 3333
+server.listen(serverPort, ()=>{
+        console.log(`Server rodando na porta ${serverPort}`)
 })
