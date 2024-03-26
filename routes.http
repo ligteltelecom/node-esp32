@@ -1,0 +1,7 @@
+### get file
+post http://localhost:3050/update
+Content-Type: application/json
+
+{
+    "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSTJDQk9YIn0.iqgCshp30UE8qf_bLgE1zuIcBGowq0jEzTGOlnXybVQ"
+}
